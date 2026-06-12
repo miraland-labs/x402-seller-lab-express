@@ -97,26 +97,30 @@ Good. Your payment gate works locally.
 
 ## C. Public HTTPS URL
 
-preview.ipay.sh cannot verify `localhost`. Deploy this app anywhere you like: Vercel, Cloudflare, Railway, AWS, your own server.
+preview.ipay.sh needs a public `https://` URL, not `localhost`. Use any host: Vercel, Cloudflare, Railway, AWS, your own server.
 
-After deploy, set `.env`:
+1. Deploy once to get your public URL.
+2. Put that URL in `.env`:
 
 ```bash
 RESOURCE_URL=https://YOUR-DOMAIN/api/v1/weather?city=Atlanta
 ```
 
-Then run:
+3. Regenerate the payment file:
 
 ```bash
 export $(grep -v '^#' .env | xargs)
 npm run enrich
-# deploy again with your normal deploy command
+```
+
+4. Deploy again so the server has the new `payment-body.devnet.json`.
+5. Test the live URL:
+
+```bash
 npm run verify-402 -- "https://YOUR-DOMAIN/api/v1/weather?city=Atlanta"
 ```
 
-Deploy must include the new `payment-body.devnet.json` file.
-
-You must see `PASS` on the **https** URL.
+You must see `PASS`.
 
 <details>
 <summary>Vercel example</summary>
