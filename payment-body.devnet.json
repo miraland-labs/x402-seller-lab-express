@@ -1,0 +1,28 @@
+{
+  "x402Version": 2,
+  "resource": {
+    "url": "https://your-app.vercel.app/api/v1/weather?city=Atlanta"
+  },
+  "accepts": [
+    {
+      "amount": "50000",
+      "asset": "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU",
+      "extra": {
+        "beneficiary": null,
+        "configAddress": "3gFSZgkM95BvSco6ycWCmZmVFG9uB9ZAWiqEVfK9nP74",
+        "feeBps": "100",
+        "feePayer": "FaciLFwHjbW9V1PtF3vAweL1K1hgin9mvXNXatEQKJdu",
+        "maxComputeUnitLimit": "12000",
+        "merchantWallet": "Ac2ev4ofDx61tuSJCgq9ToSBfVwHD2a1FVJf6p7TAqiB",
+        "minFeeAmount": "10000",
+        "minFeeAmountSol": "200000",
+        "programId": "u84EMHTHwMeFpT9M2tNoHi9vBNjev4jxi9CsrFAjjWf",
+        "recommendedComputeUnitPrice": "100000"
+      },
+      "maxTimeoutSeconds": 300,
+      "network": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+      "payTo": "Fk2HrjjS5xLasLBF28ZcjVrPmRUNrwuK29DdhQgmzPwP",
+      "scheme": "exact"
+    }
+  ]
+}
